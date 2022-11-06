@@ -60,7 +60,6 @@ void stopRecord(void) {
 
 int main() {
   t.start(callback(&queue, &EventQueue::dispatch_forever));
-  t.start(callback(&queue, &EventQueue::dispatch_forever));
   btnRecord.fall(queue.event(startRecord));
   btnRecord.rise(queue.event(stopRecord));
 }
